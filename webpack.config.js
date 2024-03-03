@@ -1,5 +1,5 @@
 const path = require("path");
-const PugPlugin = require('pug-plugin');
+const PugPlugin = require("pug-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
@@ -25,14 +25,14 @@ module.exports = {
     ],
     module: {
         rules: [
-            { 
-                test: /\.s[ac]ss$/i,
-                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
-            },
             {
                 test: /\.pug$/,
                 loader: PugPlugin.loader,
-              },
+            },
+            { 
+                test: /\.scss$/i,
+                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+            }
         ]
     },
     mode: "production"

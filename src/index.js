@@ -1,4 +1,5 @@
 import {initSlider} from "./slider.js";
+import "base.scss"
 
 document.addEventListener("DOMContentLoaded", function() {
   initSlider();
