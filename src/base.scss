@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;900&family=Open+Sans&display=swap');
 
+/*Reset.style*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0px;
   padding: 0;
@@ -52,8 +53,17 @@ a {
   box-sizing: border-box;
 }
 
+/*Base.style*/
+
+$text-color: #5C6A79;
+
+@mixin font() {
+  font-size: 16px;
+  font-weight: 700;
+}
+
 body {
-  color: #5C6A79;
+  color: $text-color;
   background: #FFFFFF;
   height: 100%;
 }
@@ -96,7 +106,7 @@ body {
 }
 
 .nav-menu__link {
-  color: #5C6A79;
+  color: $text-color;
   font-size: 10px;
   font-weight: 700;
   line-height: 12.19px;
@@ -270,12 +280,11 @@ body {
   font-size: 12px;
   font-weight: 500;
   line-height: 14.63px;
-  color: #5C6A79;
+  color: $text-color;
   cursor: pointer;
 
   &:hover {
-    font-size: 16px;
-    font-weight: 700;
+    @include font;
     line-height: 19.5px;
   }
 }
@@ -283,8 +292,7 @@ body {
 .nav-categories__item--active {
   list-style-type: disc;
   color: #1C2A39;
-  font-size: 16px;
-  font-weight: 700;
+  @include font;
   line-height: 19.5px;
 }
 
@@ -317,14 +325,13 @@ body {
   font-size: 10px;
   font-weight: 400;
   line-height: 13.62px;
-  color: #5C6A79;
+  color: $text-color;
   margin-bottom: 4px;
 }
 
 .book-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
+  @include font;
   line-height: 19.5px;
   color: #1C2A39;
   margin-bottom: 4px;
