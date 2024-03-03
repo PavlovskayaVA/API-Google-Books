@@ -1,0 +1,66 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Bookshop
+    link(rel='stylesheet', href='./style.css')
+  body
+    svg(style='display: none;')
+      symbol#star(width='12', height='11', viewBox='0 0 12 11', fill='#F2C94C', xmlns='http://www.w3.org/2000/svg')
+        g
+          path(d='M6 0L7.80568 3.5147L11.7063 4.1459L8.92165 6.9493L9.52671 10.8541L6 9.072L2.47329 10.8541L3.07835 6.9493L0.293661 4.1459L4.19432 3.5147L6 0Z')
+    header.container.header-container
+      .logo Bookshop
+      nav
+        ul.nav-menu
+          li.nav-menu__item
+            a.nav-menu__link(href='#') books
+          li.nav-menu__item
+            a.nav-menu__link(href='#') audiobooks
+          li.nav-menu__item
+            a.nav-menu__link(href='#') Stationery & gifts
+          li.nav-menu__item
+            a.nav-menu__link(href='#') blog
+      .icons
+        a.icons__item(href='#')
+          img(src='../img/user.svg', alt='user')
+        a.icons__item(href='#')
+          img(src='../img/search.svg', alt='search')
+        span.icons__item
+          a(href='#')
+            img(src='../img/shop bag.svg', alt='shop bag')
+          .quantityGoods
+            span.quantityGoods__number
+    main.container.main-container
+      .slider
+        .slider__images
+          a.promo.promo--blue(href='#')
+            .promo--blue-text Change old book on new
+            img.promo-arrow(src='../img/arrow.svg', alt='arrow-next')
+          a.promo.promo--pink(href='#')
+            .promo--pink-text top 100 books 2022
+            img.promo-arrow(src='../img/arrow.svg', alt='arrow-next')
+        .slider__dots
+      .book-items
+        aside.categories
+          ul.nav-categories
+            li.nav-categories__item.nav-categories__item--active Architecture
+            li.nav-categories__item Art & Fashion
+            li.nav-categories__item Biography
+            li.nav-categories__item Business
+            li.nav-categories__item Crafts & Hobbies
+            li.nav-categories__item Drama
+            li.nav-categories__item Fiction
+            li.nav-categories__item Food & Drink
+            li.nav-categories__item Health & Wellbeing
+            li.nav-categories__item History & Politics
+            li.nav-categories__item Humor
+            li.nav-categories__item Poetry
+            li.nav-categories__item Psychology
+            li.nav-categories__item Science
+            li.nav-categories__item echnology
+            li.nav-categories__item Travel & Maps
+        .books
+    footer
+    script(type='module', src='../dist/main.js')
